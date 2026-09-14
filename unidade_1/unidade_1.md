@@ -90,3 +90,6 @@ v_n
 $$
 
 Repare que, neste texto, denotamos vetores por meio de letras minúsculas grafadas em negrito.
+
+Em ML, um vetor representa tipicamente uma amostra (um paciente com $$n$$ exames, uma casa com $$n$$ características) ou um conjunto de parâmetros (os pesos de um modelo).
+
