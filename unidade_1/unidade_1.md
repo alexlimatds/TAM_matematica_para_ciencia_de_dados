@@ -51,13 +51,13 @@ Outro ponto importante é a relação entre álgebra linear e estatística, espe
 ## Vetores e Escalares
 
 Em álgebra linear, os conceitos de escalar e vetor são as unidades fundamentais. Um **escalar** é um único número 
-real (ou complexo), como 3, -0,5, $\pi$, e representa magnitude sem direção. Escalares são geralmente 
-denotados por letras minúsculas. Em ML, exemplos de escalares são: a taxa de aprendizado ($\alpha$), o número 
+real (ou complexo), como 3, -0,5, $`\pi`$, e representa magnitude sem direção. Escalares são geralmente 
+denotados por letras minúsculas. Em ML, exemplos de escalares são: a taxa de aprendizado ($`\alpha`$), o número 
 de épocas, a acurácia de um modelo, etc.
 
 Um **vetor** é um arranjo ordenado de escalares. O número de elementos, ou componentes, é chamado de dimensão ou dimensionalidade 
 do vetor. Por exemplo, um indivíduo de 25 anos, com salário de R$30,50 por hora e 5 anos de experiência pode ser 
-representado pelo vetor de características $\textbf{x} \in \mathbb{R}^{3}$:
+representado pelo vetor de características $`\textbf{x} \in \mathbb{R}^{3}`$:
 
 $$\textbf{x} = \begin{pmatrix} 25 & 30,5 & 5 \end{pmatrix}$$
 
@@ -96,11 +96,11 @@ $$
 
 ## Vetores e sistemas de coordenadas
 
-Um vetor bidimensional pode ser visto como um ponto no plano cartesiano (espaço $\mathbb{R}^{2}$) ou como uma seta que começa na origem do plano e termina no ponto indicado pelas coordenadas do vetor. Por exemplo, a Figura 1 ilustra os vetores $\textbf{v} = \begin{pmatrix} 2 & 7 \end{pmatrix}$ e $\textbf{w} = \begin{pmatrix} -6 & -1 \end{pmatrix}$ no plano cartesiano.
+Um vetor bidimensional pode ser visto como um ponto no plano cartesiano (espaço $\mathbb{R}^{2}$) ou como uma seta que começa na origem do plano e termina no ponto indicado pelas coordenadas do vetor. Por exemplo, a Figura 1 ilustra os vetores $`\textbf{v} = \begin{pmatrix} 2 & 7 \end{pmatrix}`$ e $`\textbf{w} = \begin{pmatrix} -6 & -1 \end{pmatrix}`$ no plano cartesiano.
 
 TODO: figura
 
-De forma análoga, vetores com três dimensões podem ser traçados no espaço cartesiano, o $\mathbb{R}^{3}$, como ilustrado na Figura 2.
+De forma análoga, vetores com três dimensões podem ser traçados no espaço cartesiano, o $`\mathbb{R}^{3}`$, como ilustrado na Figura 2.
 
 TODO: figura
 
@@ -120,7 +120,7 @@ $$
 \left\| \textbf{x} \right\|_1 = \sum_{i=1}^{n}|x_i|=|x_1|+|x_2|+\cdots +|x_n|
 $$
 
-**Exemplo:** para $\textbf{x} = \begin{pmatrix} -3 & 5 \end{pmatrix}$:
+**Exemplo:** para $`\textbf{x} = \begin{pmatrix} -3 & 5 \end{pmatrix}`$:
 
 $\left\| \textbf{x} \right\|_1 = |-3| + |5| = 3 + 5 = 8$
 
@@ -135,7 +135,7 @@ $$
 \left\| \textbf{x} \right\|_2 = \sqrt{\sum_{i=1}^{n}x_i}=\sqrt{x_1^2 + x_2^2+ \cdots +x_n^2}
 $$
 
-**Exemplo:** para $\textbf{x} = \begin{pmatrix} -3 & 5 \end{pmatrix}$:
+**Exemplo:** para $`\textbf{x} = \begin{pmatrix} -3 & 5 \end{pmatrix}`$:
 
 $\left\| \textbf{x} \right\|_2 = \sqrt{(-3)^2 + 5^2} = \sqrt{9 + 25} \approx 5,83 $
 
@@ -277,3 +277,7 @@ TODO: funções de agregação
 ```python
 
 ```
+
+## Conclusão
+
+TODO
