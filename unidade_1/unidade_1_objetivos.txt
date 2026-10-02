@@ -1,0 +1,4 @@
+Compreender a relação entre álgebra linear e aprendizado de máquina;
+Diferenciar vetores e escalares;
+Compreender a interpretação geométrica de vetores e suas operações;
+Aprender as principais operações com vetores no contexto de aprendizado de máquina e ciência de dados.
