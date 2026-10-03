@@ -111,9 +111,7 @@ $$
 
 $\left\| \mathbf{x} \right\|_1 = |-3| + |5| = 3 + 5 = 8$
 
-Geometricamente, a norma $L_1$ mede a distância percorrida ao longo de eixos ortogonais.
-
-TODO: figura
+Geometricamente, a norma $L_1$ mede a distância percorrida ao longo de cada eixo do espaço cartesiano.
 
 A **norma $L_2$**, ou norma Euclidiana, é a raiz quadrada da soma dos quadrados 
 dos componentes do vetor:
@@ -182,8 +180,6 @@ Sejam $\mathbf{v} = \begin{pmatrix} 6 & 8 \end{pmatrix}$ e $s = 2$:
 
 $\frac{v}{2} = \begin{pmatrix}\frac{6}{2}, \frac{8}{2} \end{pmatrix} = \begin{pmatrix} 3 & 4 \end{pmatrix}$
 
-TODO: figura
-
 ### Adição de Vetores
 A adição de dois vetores $\mathbf{a}, \mathbf{b} \in \mathbb{R}^n$ de mesma dimensão é realizada somando elemento a elemento:
 
@@ -193,8 +189,6 @@ $\mathbf{a} + \mathbf{b} = \begin{pmatrix} a_1 + b_1 & a_2 + b_2 & \dots & a_n +
 Sejam $\mathbf{a} = \begin{pmatrix} 1 & 3 \end{pmatrix}$ e $\mathbf{b} = \begin{pmatrix} 4 & -2 \end{pmatrix}$:
 
 $\mathbf{a} + \mathbf{b} = \begin{pmatrix} 1 & 3 \end{pmatrix} + \begin{pmatrix} 4 & -2 \end{pmatrix} = \begin{pmatrix} 1 + 4 & 3 + (-2) \end{pmatrix} = \begin{pmatrix} 5 & 1 \end{pmatrix}$
-
-TODO: figura
 
 ### Subtração de Vetores
 A subtração entre dois vetores $\mathbf{a}, \mathbf{b} \in \mathbb{R}^n$ de mesma dimensão é calculada subtraindo elemento por elemento:
@@ -260,8 +254,6 @@ Considere os vetores $\mathbf{a} = \begin{pmatrix} 1 & 2 \end{pmatrix}$ e $\math
 $$
 d(\mathbf{a}, \mathbf{b}) = \sqrt{(1 - 4)^2 + (2 - 6)^2} = \sqrt{(-3)^2 + (-4)^2} = \sqrt{9 + 16} = \sqrt{25} = 5
 $$
-
-TODO: figura
 
 CURIOSIDADE: A distância euclidiana é comumente utilizada por algoritmos de aprendizado de máquina baseados em vizinhança, como o *k-Nearest Neighbors* (k-NN) e o *k-Means*.
 
@@ -343,8 +335,6 @@ EXERCÍCIO DE FIXAÇÃO:
 
 Dois vetores $\mathbf{a}, \mathbf{b} \in \mathbb{R}^n$ são ditos **ortogonais** $(\mathbf{a} \perp \mathbf{b})$ se e somente se o produto escalar entre eles for igual a zero. Isto significa que $\mathbf{a}$ e $\mathbf{b}$ formam um ângulo de $90^\circ$.
 
-TODO: figura
-
 Quando $\mathbf{a}$ e $\mathbf{b}$ são ortogonais e ambos possuem comprimento unitário ($\left\| \mathbf{a} \right\|_2 = 1$ e $\left\| \mathbf{b} \right\|_2 = 1$), eles são denominados **ortonormais**.
 
 CURIOSIDADE: A ortogonalidade é fundamental para a análise de componentes principais (PCA), um algoritmo que tem como objetivo eliminar a redundância presente entre os componentes de um vetor.
@@ -352,7 +342,7 @@ CURIOSIDADE: A ortogonalidade é fundamental para a análise de componentes prin
 
 ## Similaridade de Cosseno
 
-A **similaridade de cosseno** é uma métrica que usa o cosseno do ângulo entre dois vetores para avaliar o quão próximos dois vetores são semelhantes independentemente dos seus comprimentos. Por exemplo, na figura abaixo podemos dizer que, com base na similaridade do cosseno, o vetor $\mathbf{a}$ é mais similar ao vetor $\mathbf{b}$ do que ao vetor $\mathbf{c}$, visto que o ângulo entre $\mathbf{a}$ e $\mathbf{b}$ é menor do que o ângulo entre $\mathbf{a}$ e $\mathbf{c}$.
+A **similaridade de cosseno** é uma métrica que usa o cosseno do ângulo entre dois vetores para avaliar o quão próximos dois vetores são semelhantes independentemente dos seus comprimentos. Por exemplo, na figura abaixo podemos dizer que, com base na similaridade do cosseno, o vetor $\mathbf{a}$ é mais similar ao vetor $\mathbf{b}$ do que ao vetor $\mathbf{c}$, visto que o ângulo $\alpha$ entre $\mathbf{a}$ e $\mathbf{b}$ é menor do que o ângulo $\beta$ entre $\mathbf{a}$ e $\mathbf{c}$.
 
 TODO: figura
 
