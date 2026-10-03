@@ -291,7 +291,7 @@ $\mathbf{a} \cdot \mathbf{b} = \begin{pmatrix} 1 & 3 \end{pmatrix} \cdot \begin{
 
 EXERCÍCIO DE FIXAÇÃO
 
-**Questão 18**: Dados os vetores $\mathbf{a} = \begin{pmatrix} 9 & 10 & -2 \end{pmatrix}$ e $\mathbf{b} = \begin{pmatrix} 0 & 5 & 4 \end{pmatrix}$, qual é o valor do produto escalar $\mathbf{a} \cdot \mathbf{b}$?
+**Questão 8**: Dados os vetores $\mathbf{a} = \begin{pmatrix} 9 & 10 & -2 \end{pmatrix}$ e $\mathbf{b} = \begin{pmatrix} 0 & 5 & 4 \end{pmatrix}$, qual é o valor do produto escalar $\mathbf{a} \cdot \mathbf{b}$?
 - A) $58$
 - B) $42$
 - C) $-58$
@@ -330,14 +330,14 @@ DICA: Repare que caso os vetores possuam comprimento unitário ($\left\| \mathbf
 
 EXERCÍCIO DE FIXAÇÃO:
 
-**Questão 30**: Dados os vetores $\mathbf{a} = \begin{pmatrix} 1 & 4 \end{pmatrix}$ e $\mathbf{b} = \begin{pmatrix} 3 & 12 \end{pmatrix}$, qual é o ângulo $\theta$ entre eles?
+**Questão 9**: Dados os vetores $\mathbf{a} = \begin{pmatrix} 1 & 4 \end{pmatrix}$ e $\mathbf{b} = \begin{pmatrix} 3 & 12 \end{pmatrix}$, qual é o ângulo $\theta$ entre eles?
 - A) $0^\circ$
 - B) $30^\circ$
 - C) $45^\circ$
 - D) $90^\circ$
 
-**Resposta Correta:** C
-> **Justificativa:** O cosseno é dado por $\cos \theta = \frac{\mathbf{a} \cdot \mathbf{b}}{\Vert{}\mathbf{a}\Vert{}_2 \Vert{}\mathbf{b}\Vert{}_2} =  \frac{1 \cdot 3 + 4 \cdot 12}{\sqrt{1^2 + 4^2} \cdot \sqrt{3^2 + 12^2}} = \frac{3 + 48}{\sqrt{17} \cdot \sqrt{153}} =\frac{51}{\sqrt{2601}} =\frac{51}{51} = 1$. ConsultaNdo um tabela trigonométrica, verificamos que $\cos \theta = 0$.
+**Resposta Correta:** A
+> **Justificativa:** O cosseno é dado por $\cos \theta = \frac{\mathbf{a} \cdot \mathbf{b}}{\Vert{}\mathbf{a}\Vert{}_2 \Vert{}\mathbf{b}\Vert{}_2} =  \frac{1 \cdot 3 + 4 \cdot 12}{\sqrt{1^2 + 4^2} \cdot \sqrt{3^2 + 12^2}} = \frac{3 + 48}{\sqrt{17} \cdot \sqrt{153}} =\frac{51}{\sqrt{2601}} =\frac{51}{51} = 1$. Consultando uma tabela trigonométrica, verificamos que $\cos 0^\circ = 0$ e, portanto, $\theta = 0^\circ$.
 
 ## Ortogonalidade entre Vetores
 
