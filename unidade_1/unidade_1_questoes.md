@@ -61,25 +61,6 @@ Como a norma de um vetor é conceitualmente definida?
 **Resposta Correta:** A
 > **Justificativa:** A norma de um vetor é uma função que atribui um valor real não negativo ao vetor, quantificando seu comprimento, tamanho ou magnitude a partir da origem do espaço vetorial.
 
-### Questão 7
-Dado o vetor $\mathbf{x} = \begin{pmatrix} 10 & -3 & 4 & 0 \end{pmatrix}$, qual é a sua norma $L_1$?
-- A) $2$
-- B) $17$
-- C) $\sqrt{11}$
-- D) $11$
-
-**Resposta Correta:** B
-> **Justificativa:** A norma $L_1$ (norma Manhattan) é a soma dos valores absolutos de seus componentes: $\|\mathbf{x}\|_1 = |10| + |-3| + |4| + |0| = 10 + 3 + 4 + 0 = 17$.
-
----
-
-### Questão 8
-Para o vetor $\mathbf{x} = \begin{pmatrix} -2 & 1 & 3 \end{pmatrix}$, qual é o valor da sua norma $L_2$?
-- A) $6$
-- B) $\sqrt{14}$
-- C) $14$
-- D) $2$
-
 **Resposta Correta:** B
 > **Justificativa:** A norma $L_2$ (norma Euclidiana) é dada pela raiz quadrada da soma dos quadrados dos componentes: $\|\mathbf{x}\|_2 = \sqrt{(-2)^2 + 1^2 + 3^2} = \sqrt{4 + 1 + 9} = \sqrt{14}$.
 
@@ -94,16 +75,6 @@ Geometricamente, o que a norma $L_2$ de um vetor representa?
 **Resposta Correta:** B
 > **Justificativa:** Geometricamente, enquanto a norma $L_1$ mede o deslocamento ao longo de eixos ortogonais, a norma $L_2$ mede a distância em linha reta do ponto até a origem do espaço vetorial.
 
-### Questão 10
-Ao multiplicar o vetor $\mathbf{v} = \begin{pmatrix} 0 & 2 & -5 \end{pmatrix}$ pelo escalar $a = -4$, qual vetor é obtido?
-- A) $\begin{pmatrix} -4 & -8 & 20\end{pmatrix}$
-- B) $\begin{pmatrix} 0 & -8 & -20 \end{pmatrix}$
-- C) $\begin{pmatrix} 0 & 8 & 20 \end{pmatrix}$
-- D) $\begin{pmatrix} 0 & -8 & 20 \end{pmatrix}$
-
-**Resposta Correta:** D
-> **Justificativa:** A multiplicação por um escalar consiste em multiplicar cada componente do vetor pelo escalar: $(-4) \cdot \begin{pmatrix} 0 & 2 & -5 \end{pmatrix} = \begin{pmatrix} (-4) \cdot 0 & (-4) \cdot 2 & (-4) \cdot (-5) \end{pmatrix} = \begin{pmatrix} 0 & -8 & 20 \end{pmatrix}$.
-
 ### Questão 11
 O que acontece com a magnitude e a direção de um vetor ao ser multiplicado por um escalar negativo $s < 0$?
 - A) A magnitude é sempre reduzida e a direção é mantida.
@@ -113,37 +84,6 @@ O que acontece com a magnitude e a direção de um vetor ao ser multiplicado por
 
 **Resposta Correta:** B
 > **Justificativa:** Um escalar negativo ($s < 0$), além de alterar a magnitude do vetor, inverte o seu sentido no espaço vetorial.
-
-### Questão 12
-Sejam $\mathbf{v} = \begin{pmatrix} 1 & 0 & -3 \end{pmatrix}$ e $s = 3$. Qual é o resultado da divisão $\frac{\mathbf{v}}{s}$?
-- A) $\begin{pmatrix} \frac{1}{3} & 0 & -1 \end{pmatrix}$
-- B) $\begin{pmatrix} 1,3 & -3 & 1 \end{pmatrix}$
-- C) $\begin{pmatrix} 0,3 & 0 & 1 \end{pmatrix}$
-- D) $\begin{pmatrix} \frac{1}{3} & 0 & 1 \end{pmatrix}$
-
-**Resposta Correta:** A
-> **Justificativa:** A divisão de um vetor por um escalar $s \neq 0$ divide cada componente por $s$: $\frac{\mathbf{v}}{3} = \begin{pmatrix} \frac{1}{3} & \frac{0}{3} & \frac{-3}{3} \end{pmatrix} = \begin{pmatrix} \frac{1}{3} & 0 & -1 \end{pmatrix}$.
-
-### Questão 13
-Dados os vetores $\mathbf{a} = \begin{pmatrix} -2 & 5 & -3 \end{pmatrix}$ e $\mathbf{b} = \begin{pmatrix} 0 & 3 & -1 \end{pmatrix}$, qual é o resultado da adição $\mathbf{a} + \mathbf{b}$?
-- A) $\begin{pmatrix} 5 & 5 \end{pmatrix}$
-- B) $\begin{pmatrix} -3 & 5 \end{pmatrix}$
-- C) $\begin{pmatrix} 5 & 1 \end{pmatrix}$
-- D) $\begin{pmatrix} 4 & -6 \end{pmatrix}$
-
-**Resposta Correta:** C
-> **Justificativa:** A adição de vetores é feita somando componente a componente: $\mathbf{a} + \mathbf{b} = \begin{pmatrix} -2+0 & 5+3 & -3+(-1) \end{pmatrix} = \begin{pmatrix} -2 & 8 & -4 \end{pmatrix}$.
-
-
-### Questão 14
-Dados os vetores $\mathbf{a} = \begin{pmatrix} -5 & 1 \end{pmatrix}$ e $\mathbf{b} = \begin{pmatrix} 3 & 8 \end{pmatrix}$, qual é o resultado da subtração $\mathbf{a} - \mathbf{b}$?
-- A) $\begin{pmatrix} -8 & -7 \end{pmatrix}$
-- B) $\begin{pmatrix} 8 & 7 \end{pmatrix}$
-- C) $\begin{pmatrix} 2 & 7 \end{pmatrix}$
-- D) $\begin{pmatrix} 2 & 9 \end{pmatrix}$
-
-**Resposta Correta:** A
-> **Justificativa:** A subtração entre vetores é dada subtraindo componente a componente: $\mathbf{a} - \mathbf{b} = \begin{pmatrix} -5 - 3 & 1 - 8 \end{pmatrix} = \begin{pmatrix} -8 & -7 \end{pmatrix}$.
 
 ### Questão 15
 Qual é a restrição para que seja possível realizar a adição ou subtração entre dois vetores?
@@ -155,26 +95,6 @@ Qual é a restrição para que seja possível realizar a adição ou subtração
 **Resposta Correta:** B
 > **Justificativa:** Não é possível adicionar ou subtrair vetores de dimensões diferentes; eles precisam pertencer ao mesmo espaço $\mathbb{R}^n$.
 
-### Questão 16
-Para os vetores $\mathbf{x} = \begin{pmatrix} 3 & -2 & -1 \end{pmatrix}$ e $\mathbf{y} = \begin{pmatrix} 2 & -2 & 4 \end{pmatrix}$, qual é a distância Euclidiana $d(\mathbf{x}, \mathbf{y})$?
-- A) $29$
-- B) $\sqrt{29}$
-- C) $25$
-- D) $\sqrt{26}$
-
-**Resposta Correta:** D
-> **Justificativa:** A distância Euclidiana é $d(\mathbf{x}, \mathbf{y}) = \sqrt{(3 - 2)^2 + (-2 - (-2))^2 + (-1 - 4)^2} = \sqrt{(1)^2 + (0)^2 + (-5)^2} = \sqrt{1 + 25} = \sqrt{26}$.
-
-### Questão 18
-Dados os vetores $\mathbf{a} = \begin{pmatrix} 9 & 10 & -2 \end{pmatrix}$ e $\mathbf{b} = \begin{pmatrix} 0 & 5 & 4 \end{pmatrix}$, qual é o valor do produto escalar $\mathbf{a} \cdot \mathbf{b}$?
-- A) $58$
-- B) $42$
-- C) $-58$
-- D) $-10$
-
-**Resposta Correta:** B
-> **Justificativa:** O produto escalar é a soma dos produtos dos componentes correspondentes: $\mathbf{a} \cdot \mathbf{b} = 9 \cdot 0 + 10 \cdot 5 + (-2)\cdot 4 = 0 + 50 - 8 = 42$.
-
 ### Questão 19
 Qual é a natureza do resultado obtido ao calcular o produto escalar entre dois vetores de mesma dimensão?
 - A) Um novo vetor de dimensão igual ao dobro da original.
@@ -184,7 +104,6 @@ Qual é a natureza do resultado obtido ao calcular o produto escalar entre dois 
 
 **Resposta Correta:** C
 > **Justificativa:** O produto escalar (ou produto interno) combina dois vetores elemento por elemento e os soma, resultando em um único valor escalar.
-
 
 ### Questão 21
 Se dois vetores possuem comprimento unitário (normas $L_2$ iguais a $1$), o cosseno do ângulo entre eles é igual a quê?
@@ -255,13 +174,3 @@ Se a similaridade de cosseno entre dois vetores $\mathbf{b}$ e $\mathbf{c}$ for 
 
 **Resposta Correta:** B
 > **Justificativa:** Um valor de similaridade próximo de $0$ (como $-0{,}081$) indica que o ângulo entre eles está próximo de $90^\circ$, o que significa que são quase ortogonais (independentes).
-
-### Questão 30
-Dados os vetores $\mathbf{a} = \begin{pmatrix} 1 & 4 \end{pmatrix}$ e $\mathbf{b} = \begin{pmatrix} 3 & 12 \end{pmatrix}$, qual é o ângulo $\theta$ entre eles?
-- A) $0^\circ$
-- B) $30^\circ$
-- C) $45^\circ$
-- D) $90^\circ$
-
-**Resposta Correta:** C
-> **Justificativa:** O cosseno é dado por $\cos \theta = \frac{\mathbf{a} \cdot \mathbf{b}}{\Vert{}\mathbf{a}\Vert{}_2 \Vert{}\mathbf{b}\Vert{}_2} =  \frac{1 \cdot 3 + 4 \cdot 12}{\sqrt{1^2 + 4^2} \cdot \sqrt{3^2 + 12^2}} = \frac{3 + 48}{\sqrt{17} \cdot \sqrt{153}} =\frac{51}{\sqrt{2601}} =\frac{51}{51} = 1$. Consultado um tabela trigonométrica, verificamos que $\cos \theta = 0$.
