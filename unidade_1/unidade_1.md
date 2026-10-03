@@ -2,8 +2,7 @@
 
 ## Introdução
 
-A álgebra linear é a linguagem matemática por trás da maioria dos algoritmos de aprendizado de máquina. 
-Neste texto, você verá o que são vetores e escalares, como interpretá-los geometricamente, como calcular normas e como realizar operações entre vetores, sempre conectando cada conceito a aplicações em aprendizado de máquina.
+A álgebra linear é a linguagem fundamental por trás dos algoritmos modernos de inteligência artificial. Neste capítulo, você compreenderá a relação direta entre a álgebra linear e o aprendizado de máquina, aprendendo a diferenciar escalares de vetores e a dominar suas representações. Além de explorar a interpretação geométrica dos vetores, você aprenderá a executar e aplicar suas principais operações no contexto prático da ciência de dados. Prepare-se para sua jornada na construção de uma base matemática essencial que transformará dados brutos em modelos inteligentes e preditivos!
 
 ## Álgebra Linear e Aprendizado de Máquina
 
@@ -74,8 +73,6 @@ Repare que, neste texto, vetores são denotados por meio de letras minúsculas g
 
 Em aprendizado de máquina, um vetor representa tipicamente uma amostra (um paciente com $n$ exames, uma casa com $n$ características) ou um conjunto de parâmetros (os pesos de um modelo).
 
-### Vetor nulo
-
 O **vetor nulo**, denotado por $\mathbf{0}$, é o vetor em que todos os seus componentes são iguais a zero:
 
 $$
@@ -94,7 +91,7 @@ De forma análoga, vetores com três dimensões podem ser traçados no espaço c
 
 TODO: figura
 
-É importante perceber que vetores podem ter uma, duas, três ou mais dimensões. Pode parecer estranho pensar em um vetor com 10 dimensões, mas do ponto de vista matemático isso é totalmente possível. Vetores com quatro ou mais dimensões são de difícil visualização, mas são comuns no contexto de aprendizado de máquina e ciência de dados.
+DICA: É importante perceber que vetores podem ter uma, duas, três ou mais dimensões. Pode parecer estranho pensar em um vetor com 10 dimensões, mas do ponto de vista matemático isso é totalmente possível. Vetores com quatro ou mais dimensões são de difícil visualização, mas são comuns no contexto de aprendizado de máquina e ciência de dados.
 
 ## Norma de um vetor
 
@@ -132,6 +129,27 @@ $\left\| \mathbf{x} \right\|_2 = \sqrt{(-3)^2 + 5^2} = \sqrt{9 + 25} \approx 5{,
 Geometricamente, a norma $L_2$ mede a distância em linha reta do ponto até a origem do espaço vetorial.
 
 TODO: figura
+
+EXERCÍCIOS DE FIXAÇÃO
+
+**Questão 1**: Dado o vetor $\mathbf{x} = \begin{pmatrix} 10 & -3 & 4 & 0 \end{pmatrix}$, qual é a sua norma $L_1$?
+- A) $2$
+- B) $17$
+- C) $\sqrt{11}$
+- D) $11$
+
+**Resposta Correta:** B
+> **Justificativa:** A norma $L_1$ (norma Manhattan) é a soma dos valores absolutos de seus componentes: $\|\mathbf{x}\|_1 = |10| + |-3| + |4| + |0| = 10 + 3 + 4 + 0 = 17$.
+
+
+**Questão 2**: Dado o vetor $\mathbf{x} = \begin{pmatrix} -2 & 1 & 3 \end{pmatrix}$, qual é o valor da sua norma $L_2$?
+- A) $6$
+- B) $\sqrt{14}$
+- C) $14$
+- D) $2$
+
+**Resposta Correta:** B
+> **Justificativa:** A norma $L_2$ (norma Euclidiana) é dada pela raiz quadrada da soma dos quadrados dos componentes: $\|\mathbf{x}\|_2 = \sqrt{(-2)^2 + 1^2 + 3^2} = \sqrt{4 + 1 + 9} = \sqrt{14}$.
 
 ## Operações com Vetores
 
@@ -190,7 +208,45 @@ $\mathbf{a} - \mathbf{b} = \begin{pmatrix} 1 & 3 \end{pmatrix} - \begin{pmatrix}
 
 TODO: figura
 
-Repare que não é possível adicionar ou subtrair vetores com dimensões diferentes.
+DICA: Repare que não é possível adicionar ou subtrair vetores com dimensões diferentes.
+
+EXERCÍCIO DE FIXAÇÃO
+
+**Questão 3**: Ao multiplicar o vetor $\mathbf{v} = \begin{pmatrix} 0 & 2 & -5 \end{pmatrix}$ pelo escalar $a = -4$, qual vetor é obtido?
+- A) $\begin{pmatrix} -4 & -8 & 20\end{pmatrix}$
+- B) $\begin{pmatrix} 0 & -8 & -20 \end{pmatrix}$
+- C) $\begin{pmatrix} 0 & 8 & 20 \end{pmatrix}$
+- D) $\begin{pmatrix} 0 & -8 & 20 \end{pmatrix}$
+
+**Resposta Correta:** D
+> **Justificativa:** A multiplicação por um escalar consiste em multiplicar cada componente do vetor pelo escalar: $(-4) \cdot \begin{pmatrix} 0 & 2 & -5 \end{pmatrix} = \begin{pmatrix} (-4) \cdot 0 & (-4) \cdot 2 & (-4) \cdot (-5) \end{pmatrix} = \begin{pmatrix} 0 & -8 & 20 \end{pmatrix}$.
+
+**Questão 4**: Sejam $\mathbf{v} = \begin{pmatrix} 1 & 0 & -3 \end{pmatrix}$ e $s = 3$. Qual é o resultado da divisão $\frac{\mathbf{v}}{s}$?
+- A) $\begin{pmatrix} \frac{1}{3} & 0 & -1 \end{pmatrix}$
+- B) $\begin{pmatrix} 1,3 & -3 & 1 \end{pmatrix}$
+- C) $\begin{pmatrix} 0,3 & 0 & 1 \end{pmatrix}$
+- D) $\begin{pmatrix} \frac{1}{3} & 0 & 1 \end{pmatrix}$
+
+**Resposta Correta:** A
+> **Justificativa:** A divisão de um vetor por um escalar $s \neq 0$ divide cada componente por $s$: $\frac{\mathbf{v}}{3} = \begin{pmatrix} \frac{1}{3} & \frac{0}{3} & \frac{-3}{3} \end{pmatrix} = \begin{pmatrix} \frac{1}{3} & 0 & -1 \end{pmatrix}$.
+
+**Questão 5**: Dados os vetores $\mathbf{a} = \begin{pmatrix} -2 & 5 & -3 \end{pmatrix}$ e $\mathbf{b} = \begin{pmatrix} 0 & 3 & -1 \end{pmatrix}$, qual é o resultado da adição $\mathbf{a} + \mathbf{b}$?
+- A) $\begin{pmatrix} 0 & 15 & -3 \end{pmatrix}$
+- B) $\begin{pmatrix} 0 & 8 & - 4 \end{pmatrix}$
+- C) $\begin{pmatrix} -2 & 8 & 4 \end{pmatrix}$
+- D) $\begin{pmatrix} -2 & 8 & -2 \end{pmatrix}$
+
+**Resposta Correta:** C
+> **Justificativa:** A adição de vetores é feita somando componente a componente: $\mathbf{a} + \mathbf{b} = \begin{pmatrix} -2+0 & 5+3 & -3+(-1) \end{pmatrix} = \begin{pmatrix} -2 & 8 & -4 \end{pmatrix}$.
+
+**Questão 6**: Dados os vetores $\mathbf{a} = \begin{pmatrix} -5 & 1 \end{pmatrix}$ e $\mathbf{b} = \begin{pmatrix} 3 & 8 \end{pmatrix}$, qual é o resultado da subtração $\mathbf{a} - \mathbf{b}$?
+- A) $\begin{pmatrix} -8 & -7 \end{pmatrix}$
+- B) $\begin{pmatrix} 8 & 7 \end{pmatrix}$
+- C) $\begin{pmatrix} 2 & 7 \end{pmatrix}$
+- D) $\begin{pmatrix} 2 & 9 \end{pmatrix}$
+
+**Resposta Correta:** A
+> **Justificativa:** A subtração entre vetores é dada subtraindo componente a componente: $\mathbf{a} - \mathbf{b} = \begin{pmatrix} -5 - 3 & 1 - 8 \end{pmatrix} = \begin{pmatrix} -8 & -7 \end{pmatrix}$.
 
 ## Distância Euclidiana entre Vetores
 
@@ -207,7 +263,18 @@ $$
 
 TODO: figura
 
-A distância euclidiana é comumente utilizada por algoritmos de aprendizado de máquina baseados em vizinhança, como o *k-Nearest Neighbors* (k-NN) e o *k-Means*.
+CURIOSIDADE: A distância euclidiana é comumente utilizada por algoritmos de aprendizado de máquina baseados em vizinhança, como o *k-Nearest Neighbors* (k-NN) e o *k-Means*.
+
+EXERCÍCIO DE FIXAÇÃO
+
+**Questão 7**: Para os vetores $\mathbf{x} = \begin{pmatrix} 3 & -2 & -1 \end{pmatrix}$ e $\mathbf{y} = \begin{pmatrix} 2 & -2 & 4 \end{pmatrix}$, qual é a distância Euclidiana $d(\mathbf{x}, \mathbf{y})$?
+- A) $29$
+- B) $\sqrt{29}$
+- C) $25$
+- D) $\sqrt{26}$
+
+**Resposta Correta:** D
+> **Justificativa:** A distância Euclidiana é $d(\mathbf{x}, \mathbf{y}) = \sqrt{(3 - 2)^2 + (-2 - (-2))^2 + (-1 - 4)^2} = \sqrt{(1)^2 + (0)^2 + (-5)^2} = \sqrt{1 + 25} = \sqrt{26}$.
 
 ## Produto Escalar
 
@@ -221,6 +288,17 @@ $$
 Sejam $\mathbf{a} = \begin{pmatrix} 1 & 3 \end{pmatrix}$ e $\mathbf{b} = \begin{pmatrix} 4 & -2 \end{pmatrix}$:
 
 $\mathbf{a} \cdot \mathbf{b} = \begin{pmatrix} 1 & 3 \end{pmatrix} \cdot \begin{pmatrix} 4 & -2 \end{pmatrix} = 1 \cdot 4 + 3 \cdot (-2) =  4 + (-6) = -2$
+
+EXERCÍCIO DE FIXAÇÃO
+
+**Questão 18**: Dados os vetores $\mathbf{a} = \begin{pmatrix} 9 & 10 & -2 \end{pmatrix}$ e $\mathbf{b} = \begin{pmatrix} 0 & 5 & 4 \end{pmatrix}$, qual é o valor do produto escalar $\mathbf{a} \cdot \mathbf{b}$?
+- A) $58$
+- B) $42$
+- C) $-58$
+- D) $-10$
+
+**Resposta Correta:** B
+> **Justificativa:** O produto escalar é a soma dos produtos dos componentes correspondentes: $\mathbf{a} \cdot \mathbf{b} = 9 \cdot 0 + 10 \cdot 5 + (-2)\cdot 4 = 0 + 50 - 8 = 42$.
 
 ## Ângulo entre Dois Vetores
 Observe o ângulo a figura abaixo e note que dois vetores quaisquer formam um ângulo com vértice na origem do plano.
@@ -248,7 +326,18 @@ $\cos \theta = \frac{\mathbf{a} \cdot \mathbf{b}}{\left\| \mathbf{a} \right\|_2 
 
 $\theta = \text{arc cos} \frac{\sqrt{2}}{2} = 45^\circ$
 
-Repare que caso os vetores possuam comprimento unitário ($\left\| \mathbf{a} \right\|_2 = 1$ e $\left\| \mathbf{b} \right\|_2 = 1$), o cosseno do ângulo entre eles é igual ao seu produto escalar.
+DICA: Repare que caso os vetores possuam comprimento unitário ($\left\| \mathbf{a} \right\|_2 = 1$ e $\left\| \mathbf{b} \right\|_2 = 1$), o cosseno do ângulo entre eles é igual ao seu produto escalar.
+
+EXERCÍCIO DE FIXAÇÃO:
+
+**Questão 30**: Dados os vetores $\mathbf{a} = \begin{pmatrix} 1 & 4 \end{pmatrix}$ e $\mathbf{b} = \begin{pmatrix} 3 & 12 \end{pmatrix}$, qual é o ângulo $\theta$ entre eles?
+- A) $0^\circ$
+- B) $30^\circ$
+- C) $45^\circ$
+- D) $90^\circ$
+
+**Resposta Correta:** C
+> **Justificativa:** O cosseno é dado por $\cos \theta = \frac{\mathbf{a} \cdot \mathbf{b}}{\Vert{}\mathbf{a}\Vert{}_2 \Vert{}\mathbf{b}\Vert{}_2} =  \frac{1 \cdot 3 + 4 \cdot 12}{\sqrt{1^2 + 4^2} \cdot \sqrt{3^2 + 12^2}} = \frac{3 + 48}{\sqrt{17} \cdot \sqrt{153}} =\frac{51}{\sqrt{2601}} =\frac{51}{51} = 1$. ConsultaNdo um tabela trigonométrica, verificamos que $\cos \theta = 0$.
 
 ## Ortogonalidade entre Vetores
 
@@ -258,7 +347,7 @@ TODO: figura
 
 Quando $\mathbf{a}$ e $\mathbf{b}$ são ortogonais e ambos possuem comprimento unitário ($\left\| \mathbf{a} \right\|_2 = 1$ e $\left\| \mathbf{b} \right\|_2 = 1$), eles são denominados **ortonormais**.
 
-A ortogonalidade é fundamental para a análise de componentes principais (PCA), um algoritmo que tem como objetivo eliminar a redundância presente entre os componentes de um vetor.
+CURIOSIDADE: A ortogonalidade é fundamental para a análise de componentes principais (PCA), um algoritmo que tem como objetivo eliminar a redundância presente entre os componentes de um vetor.
 
 
 ## Similaridade de Cosseno
@@ -271,7 +360,7 @@ Por ser baseada no valor do cosseno, a similaridade de cosseno varia no interval
 
 TODO: figura
 
-A similaridade de cosseno é amplamente empregada em processamento de linguagem natural e em sistemas de recomendação. Quando textos ou itens são convertidos em vetores de atributos, o tamanho do documento altera a magnitude dos vetores, mas não o tópico de cada vetor. A similaridade de cosseno compara o conteúdo do texto independentemente da sua extensão.
+CURIOSIDADE: A similaridade de cosseno é amplamente empregada em processamento de linguagem natural e em sistemas de recomendação. Quando textos ou itens são convertidos em vetores de atributos, o tamanho do documento altera a magnitude dos vetores, mas não o tópico de cada vetor. A similaridade de cosseno compara o conteúdo do texto independentemente da sua extensão.
 
 **Exemplo:**
 Sejam $\mathbf{a} = \begin{pmatrix} 1 & 3 \end{pmatrix}$, $\mathbf{b} = \begin{pmatrix} 2 & -2 \end{pmatrix}$ e $\mathbf{c} = \begin{pmatrix} 8 & 10 \end{pmatrix}$, vamos analisar as similaridades entre estes vetores.
