@@ -2,7 +2,7 @@
 
 ## Introdução
 
-A álgebra linear é a linguagem fundamental por trás dos algoritmos modernos de inteligência artificial. Neste capítulo, você compreenderá a relação direta entre a álgebra linear e o aprendizado de máquina, aprendendo a diferenciar escalares de vetores e a dominar suas representações. Além de explorar a interpretação geométrica dos vetores, você aprenderá a executar e aplicar suas principais operações no contexto prático da ciência de dados. Prepare-se para sua jornada na construção de uma base matemática essencial que transformará dados brutos em modelos inteligentes e preditivos!
+A álgebra linear é a linguagem fundamental por trás dos algoritmos modernos de inteligência artificial. Neste capítulo, você compreenderá a relação direta entre a álgebra linear e o aprendizado de máquina, aprendendo a diferenciar escalares de vetores e a dominar suas representações. Além de explorar a interpretação geométrica dos vetores, você aprenderá a executar e aplicar suas principais operações no contexto prático da ciência de dados. Prepare-se para sua jornada na construção de uma base matemática fundamental para a compreensão sólida dos modelos que revolucionaram a inteligência artificial.
 
 ## Álgebra Linear e Aprendizado de Máquina
 
