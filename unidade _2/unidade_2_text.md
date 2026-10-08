@@ -1,8 +1,16 @@
 # Unidade 2: Introdução às Matrizes
 
+## Objetivos
+
+- Definir matrizes e suas características; 
+- Apresentar a relevância das matrizes para o aprendizado de máquina; 
+- Apresentar diversos tipos de matrizes; 
+- Demonstrar como calcular a norma de Frobenius de uma matriz; 
+- Explicar as operações de adição e subtração de matrizes, de multiplicação de matrizes e de multiplicação de uma matriz por um escalar.
+
 ## Introdução
 
-TODO
+As matrizes são a base da álgebra linear e são fundamentais para o aprendizado de máquina. Elas permitem estruturar conjuntos de dados, em que linhas representam observações e colunas representam características. Neste capítulo, você será apresentado às matrizes e suas propriedades, irá explorar diversos tipos de matrizes e também aprenderá como calcular a norma de Frobenius. Além disso, você compreenderá a multiplicação de uma matriz por um escalar, bem como as operações de adição, subtração e multiplicação matriciais, as quais são utilizadas intensivamente por diversos algoritmos de aprendizado de máquina.
 
 ## Definição e Representação de Matrizes
 
@@ -40,7 +48,25 @@ $$
 
 Aqui, $b_{3,2} = -3$ e $b_{1,1} = -1$. 
 
-Em aprendizado de máquina, matrizes como essas são frequentemente utilizadas para representar conjuntos de dados, onde cada linha corresponde a uma observação e cada coluna a uma característica (*feature*). Por exemplo, em um problema de classificação de clientes, as linhas poderiam representar indivíduos e as colunas poderiam conter atributos como idade, salário e tempo de experiência.
+Em aprendizado de máquina, matrizes como essas são frequentemente utilizadas para representar conjuntos de dados, onde cada linha corresponde a uma observação e cada coluna a uma característica (*feature*). Tomemos como exemplo a tabela a seguir que apresenta um histórico parcial de alguns produtos agrícolas no Rio Grande do Norte.
+
+| Ano  | Cebola (T) | Mandioca (T) | Melão (T) | Tomate (T) |
+|:---: |:----: |:----:   |:----:   |:----:|
+| 2025 | 7.173 | 492.395 | 362.678 | 5.688 |
+| 2024 | 6.980 | 276.245 | 505.212 | 6.399 |
+| 2023 | 5.399 | 297.506 | 604.566 | 6.082 |
+| 2022 | 2.898 | 220.083 | 442.107 | 6.090 |
+
+Essa mesma tabela poderia ser representada pela matriz $P$:
+
+$$
+P = \begin{pmatrix}
+2025 & 7.173 & 492.395 & 362.678 & 5.688 \\
+2024 & 6.980 & 276.245 & 505.212 & 6.399 \\
+2023 & 5.399 & 297.506 & 604.566 & 6.082 \\
+2022 & 2.898 & 220.083 & 442.107 & 6.090 \\
+\end{pmatrix}
+$$
 
 ## Ordem de uma Matriz
 
@@ -58,7 +84,7 @@ $$
 
 Nesta matriz, o número de linhas é igual ao número de colunas, ambas iguais a 3, caracterizando uma matriz quadrada de ordem 3.
 
-Como segundo exemplo, apresentamos uma matriz retangular de ordem $4 \times 2$:
+Como segundo exemplo, temos uma matriz retangular de ordem $4 \times 2$:
 
 $$
 D = \begin{pmatrix}
@@ -133,9 +159,22 @@ $$
 
 As matrizes $A$ e $B$ são iguais, pois todos os elementos coincidem. Já $A$ e $C$ não são iguais, pois $a_{2,2} = 4 \neq 5 = c_{2,2}$.
 
+## Matriz Nula
+
+A **matriz nula**, denotada por $0$, é uma matriz em que todos os elementos são iguais a zero. Exemplo:
+
+$$
+0_{2 \times 3} = \begin{pmatrix}
+0 & 0 & 0 \\
+0 & 0 & 0
+\end{pmatrix}
+$$
+
+DICA: A matriz nula atua como elemento neutro na adição e na subtração de matrizes.
+
 ## Norma de Frobenius
 
-A **norma de Frobenius** de uma matriz $A$ de ordem $m \times n$ é definida como a raiz quadrada da soma dos quadrados de todos os seus elementos:
+A **norma de Frobenius** de uma matriz $A_{m \times n}$ é definida como a raiz quadrada da soma dos quadrados de todos os seus elementos:
 
 $$
 \|A\|_F = \sqrt{\sum_{i=1}^{m} \sum_{j=1}^{n} (a_{ij})^2}
@@ -156,7 +195,7 @@ $$
 \|A\|_F = \sqrt{1^2 + (-2)^2 + 3^2 + 4^2} = \sqrt{1 + 4 + 9 + 16} = \sqrt{30} \approx 5{,}477
 $$
 
-A norma de Frobenius também se relaciona com o traço da matriz, conforme veremos adiante.
+Se pegarmos uma matriz $A_{m \times n}$ e "estica-la" em um único vetor gigante de comprimento $m \cdot n$, a norma de Frobenius da matriz é rigorosamente idêntica à norma Euclidiana (comprimento) desse vetor. Sob esta ótica, a norma de Frobenius mede a distância em linha reta da matriz $A$ até a matriz nula em um espaço cartesiano de $m \times n$ dimensões.
 
 CURIOSIDADE: a norma de Frobenius é particularmente útil em aprendizado de máquina, pois fornece uma medida da magnitude global dos parâmetros de um modelo. Por exemplo, em técnicas de regularização como o *weight decay*, a norma de Frobenius é utilizada para penalizar pesos excessivamente grandes, evitando sobreajuste do modelo.
 
@@ -179,7 +218,7 @@ $$
 
 ## Matriz Transposta e Matriz Simétrica
 
-A **transposta** de uma matriz $A$ de ordem $m \times n$, denotada por $A^T$, é a matriz de ordem $n \times m$ obtida pela troca de linhas por colunas. Formalmente, $(A^T)_{ij} = a_{ji}$.
+A **transposta** de uma matriz $A_{m \times n}$, denotada por $A^T$, é a matriz de ordem $n \times m$ obtida pela troca de linhas por colunas. Formalmente, $(A^T)_{ij} = a_{ji}$.
 
 Primeiro exemplo:
 
@@ -219,9 +258,15 @@ S = \begin{pmatrix}
 2 & 4 & 5 \\
 3 & 5 & 6
 \end{pmatrix}
+\quad \Rightarrow \quad
+S^T = \begin{pmatrix}
+1 & 2 & 3 \\
+2 & 4 & 5 \\
+3 & 5 & 6
+\end{pmatrix}
 $$
 
-CURIOSIDADE: Matrizes simétricas são importantes em aprendizado de máquina, especialmente em *kernels* de máquinas de vetores de suporte (SVM) e em matrizes de covariância, que capturam a variabilidade conjunta de características.
+CURIOSIDADE: Matrizes simétricas são importantes em aprendizado de máquina, especialmente em *kernels* de máquinas de vetores de suporte (SVM) e em matrizes de covariância entre atributos.
 
 ## Diagonal Principal, Diagonal Secundária e Matriz Diagonal
 
@@ -240,28 +285,6 @@ D = \begin{pmatrix}
 0 & 0 & 5
 \end{pmatrix}
 $$
-
-## Traço de uma Matriz Quadrada
-
-O **traço** de uma matriz quadrada $A$ de ordem $n \times n$, denotado por $\operatorname{tr}(A)$, é definido como a soma dos elementos da diagonal principal:
-
-$$
-\operatorname{tr}(A) = \sum_{i=1}^{n} a_{ii}
-$$
-
-Exemplo:
-
-$$
-A = \begin{pmatrix}
-1 & 2 & 3 \\
-4 & 5 & 6 \\
-7 & 8 & 9
-\end{pmatrix}
-\quad \Rightarrow \quad
-\operatorname{tr}(A) = 1 + 5 + 9 = 15
-$$
-
-CURIOSIDADE: uma característica importante do traço é $\operatorname{tr}(A^T) = \operatorname{tr}(A)$, ou seja, o traço de uma matriz é igual ao traço da sua transposta.
 
 ## Matriz Triangular Superior e Inferior
 
@@ -287,11 +310,11 @@ $$
 
 LEMBRETE: É importante ressaltar que, por definição, matrizes triangulares devem ser quadradas.
 
-CURIOSIDADE: Matrizes triangulares surgem em decomposições matriciais como LU e Cholesky, utilizadas para resolver sistemas lineares e calcular matrizes inversas de forma eficiente.
+CURIOSIDADE: Matrizes triangulares surgem em decomposições matriciais como as decomposições LU e de Cholesky, as quais são utilizadas para resolver sistemas lineares e calcular matrizes inversas de forma eficiente.
 
-## Matriz Unitária e Matriz Nula
+## Matriz Unitária
 
-A **matriz unitária**, também conhecida como **matriz identidade**, é uma matriz quadrada em que todos os elementos da diagonal principal são iguais a 1 e todos os demais são 0. A matriz unitária é usualmente genotada por $I_n$, onde $n$ indica a ordem da matriz. Exemplo:
+A **matriz unitária**, também conhecida como **matriz identidade**, é uma matriz quadrada em que todos os elementos da diagonal principal são iguais a 1 e todos os demais são 0. A matriz unitária é usualmente denotada por $I_n$, onde $n$ indica a ordem da matriz. Exemplo:
 
 $$
 I_3 = \begin{pmatrix}
@@ -302,17 +325,6 @@ I_3 = \begin{pmatrix}
 $$
 
 A propriedade fundamental da matriz identidade é que $AI = IA = A$ para qualquer matriz $A$ de ordem compatível.
-
-A **matriz nula**, denotada por $0$, é uma matriz em que todos os elementos são iguais a zero. Exemplo:
-
-$$
-0_{2 \times 3} = \begin{pmatrix}
-0 & 0 & 0 \\
-0 & 0 & 0
-\end{pmatrix}
-$$
-
-DICA: A matriz nula atua como elemento neutro na adição e na subtração de matrizes.
 
 ## Adição de Matrizes
 
@@ -468,11 +480,45 @@ $
 
 ## Conclusão
 
-As matrizes constituem a espinha dorsal matemática do aprendizado de máquina. Desde a representação de conjuntos de dados até a formulação de algoritmos de otimização, o domínio dos conceitos apresentados neste texto é essencial para qualquer estudante que deseje compreender profundamente os fundamentos teóricos e práticos dessa área em constante evolução. A compreensão da norma de Frobenius, do traço, das operações básicas e dos diversos tipos de matrizes permite não apenas a implementação eficiente de algoritmos, mas também a interpretação geométrica e estatística dos modelos, facilitando a diagnose de problemas e a proposição de soluções inovadoras.
+Nesta unidade, exploramos os fundamentos essenciais das matrizes e suas operações no contexto da álgebra linear e do aprendizado de máquina. Ao longo do capítulo, definimos o conceito de matriz como um arranjo bidimensional de escalares e vimos como essa estrutura é utilizada para organizar conjuntos de dados, em que linhas representam observações e colunas correspondem a atributos.
 
-TODO: gerar o texto da conclusão
+Aprofundamos nossa compreensão ao classificar as matrizes por sua ordem (quadradas ou retangulares) e ao examinar tipos especiais — como matrizes nulas, simétricas, diagonais, triangulares e unitárias —, reconhecendo a relevância de cada uma na simplificação de problemas computacionais e em decomposições matriciais. Além disso, aprendemos a calcular a norma de Frobenius, uma métrica de magnitude global amplamente empregada na regularização de modelos.
 
-TODO: glossário
+Por fim, cobrimos as operações matriciais elementares: a igualdade, a transposição, a adição, a subtração e a multiplicação por um escalar. Essas operações formam a base matemática necessária para a manipulação de dados e a atualização de parâmetros em algoritmos de otimização. O domínio desses conceitos prepara você para avançar com confiança rumo a tópicos mais complexos, como a multiplicação entre matrizes, a inversão matricial e as transformações lineares no aprendizado de máquina.
+
+## Glossário
+
+* **Diagonal Principal:** Conjunto de elementos $a_{ij}$ de uma matriz quadrada em que o índice da linha é igual ao índice da coluna ($i = j$).
+
+* **Diagonal Secundária:** Conjunto de elementos $a_{ij}$ de uma matriz quadrada de ordem $n$ que satisfazem a condição $i + j = n + 1$, percorrendo da extremidade superior direita à inferior esquerda.
+
+* **Matriz:** Arranjo retangular bidimensional de valores escalares organizados em linhas e colunas.
+
+* **Matriz Coluna:** Matriz composta por apenas uma coluna, possuindo ordem $m \times 1$.
+
+* **Matriz Diagonal:** Matriz quadrada em que todos os elementos fora da diagonal principal são iguais a zero.
+
+* **Matriz Linha:** Matriz composta por apenas uma linha, possuindo ordem $1 \times n$.
+
+* **Matriz Nula:** Matriz na qual todos os seus elementos são iguais a zero, atuando como elemento neutro na adição e subtração matricial.
+
+* **Matriz Quadrada:** Matriz que possui o número de linhas igual ao número de colunas ($m = n$).
+
+* **Matriz Retangular:** Matriz cujo número de linhas é diferente do número de colunas ($m \neq n$).
+
+* **Matriz Simétrica:** Matriz quadrada que é estritamente igual à sua transposta ($A = A^T$), ou seja, $a_{ij} = a_{ji}$ para todos os índices.
+
+* **Matriz Transposta:** Matriz $A^T$ obtida a partir da troca ordenada de linhas por colunas de uma matriz $A$, de modo que $(A^T)_{ij} = a_{ji}$.
+
+* **Matriz Triangular Inferior:** Matriz quadrada na qual todos os elementos localizados acima da diagonal principal são nulos ($a_{ij} = 0$ para $i < j$).
+
+* **Matriz Triangular Superior:** Matriz quadrada na qual todos os elementos localizados abaixo da diagonal principal são nulos ($a_{ij} = 0$ para $i > j$).
+
+* **Matriz Unitária (Identidade):** Matriz quadrada $I_n$ na qual todos os elementos da diagonal principal são iguais a 1 e todos os demais elementos são iguais a 0.
+
+* **Norma de Frobenius:** Métrica de magnitude global de uma matriz, calculada pela raiz quadrada da soma dos quadrados de todos os seus elementos ($\Vert{}A\Vert{}_F = \sqrt{\sum (a_{ij})^2}$).
+
+* **Ordem de uma Matriz:** Par ordenado $m \times n$ que especifica, respectivamente, a quantidade de linhas ($m$) e colunas ($n$) da matriz.
 
 ## Referências
 
